@@ -1,12 +1,12 @@
-const emilyRoute = (req, res) => {
-    res.send('Emily Birch');
+const yosemiteRoute = (req, res) => {
+    res.send('Yosemite Sam');
 };
 
-const hannahRoute = (req, res) => {
-    res.send('Hannah Birch');
+const bugsRoute = (req, res) => {
+    res.send('Bugs Bunny');
 };
 
 module.exports = {
-    emilyRoute,
-    hannahRoute,
+    yosemiteRoute,
+    bugsRoute
 };

@@ -1,2 +1,7 @@
 GET http://localhost:3000/contacts
-# the request above returns a json object with all professional data for Looney Tunes characters. No database is connected.
+###
+GET http://localhost:3000/contacts/644a04d781400c07187e1527
+###
+GET http://localhost:3000/contacts/644a04d781400c07187e1528
+###
+GET http://localhost:3000/contacts/644a04d781400c07187e1529

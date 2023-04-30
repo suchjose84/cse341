@@ -1,5 +1,6 @@
-GET http://localhost:3000/contacts
 ### LOCAL
+GET http://localhost:3000/contacts
+###
 GET http://localhost:3000/contacts/644a04d781400c07187e1527
 ###
 GET http://localhost:3000/contacts/644a04d781400c07187e1528

@@ -7,6 +7,8 @@ GET http://localhost:3000/contacts/644a04d781400c07187e1528
 GET http://localhost:3000/contacts/644a04d781400c07187e1529
 
 ### render.com
+GET https://cse341-mw5a.onrender.com/contacts
+###
 GET https://cse341-mw5a.onrender.com/contacts/644a04d781400c07187e1527
 ###
 GET https://cse341-mw5a.onrender.com/contacts/644a04d781400c07187e1528

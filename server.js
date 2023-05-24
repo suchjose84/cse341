@@ -7,13 +7,9 @@ const app = express();
 
 app
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  .use(cors())
-  .use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://cse341-contacts-frontend.netlify.app/');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  })
+  .use(cors({
+    origin: 'https://cse341-contacts-frontend.netlify.app/'
+  }))
   .use(express.json())
   .use(express.urlencoded({
     extended: true

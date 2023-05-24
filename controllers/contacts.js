@@ -34,7 +34,7 @@ exports.findAll = (req, res) => {
   }
 };
 
-// Find a single Temple with an id
+// Find a single contact with an id
 exports.findOne = (req, res) => {
   /*
     #swagger.description = 'API Key if needed: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N'
@@ -77,7 +77,7 @@ exports.createContact = (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   });
-  // Save Temple in the database
+  // Save contact in the database
   contact
     .save(contact)
     .then((data) => {
@@ -91,53 +91,93 @@ exports.createContact = (req, res) => {
     });
 };
 
+// exports.updateContact = (req, res) => {
+//   const apiKey = req.query.apiKey; // Extract the API key from the query parameter
+
+//   const { id } = req.params;
+//   const updateData = req.body;
+
+//   if (apiKey !== 'Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N') {
+//     return res.status(401).send('Unauthorized');
+//   }
+
+//   Contact.findByIdAndUpdate(id, updateData, { new: true })
+//     .then((updatedContact) => {
+//       if (!updatedContact) {
+//         return res.status(404).send('Contact not found');
+//       }
+//       res.send(updatedContact);
+//     })
+//     .catch((error) => {
+//       res.status(500).send({
+//         message: error.message || 'Error updating the contact',
+//       });
+//     });
+// };
+
+// Update a contact by the id in the request
 exports.updateContact = (req, res) => {
-  const apiKey = req.query.apiKey; // Extract the API key from the query parameter
-
-  const { id } = req.params;
-  const updateData = req.body;
-
-  if (apiKey !== 'Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N') {
-    return res.status(401).send('Unauthorized');
+  if (!req.body) {
+    return res.status(400).send({
+      message: 'Data to update can not be empty!',
+    });
   }
 
-  Contact.findByIdAndUpdate(id, updateData, { new: true })
-    .then((updatedContact) => {
-      if (!updatedContact) {
-        return res.status(404).send('Contact not found');
-      }
-      res.send(updatedContact);
+  const id = req.params.id;
+
+  Contact.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot update this contact with id=${id}. Maybe the contact was not found!`,
+        });
+      } else res.send({ message: 'Contact was updated successfully.' });
     })
-    .catch((error) => {
+    .catch((err) => {
       res.status(500).send({
-        message: error.message || 'Error updating the contact',
+        message: 'Error updating contact with id=' + id,
       });
     });
 };
 
-// Update a Temple by the id in the request
-// exports.updateContact = (req, res) => {
-//   if (!req.body) {
-//     return res.status(400).send({
-//       message: 'Data to update can not be empty!',
-//     });
-//   }
 
-//   const id = req.params.id;
+// Delete a contact with the specified id in the request
+exports.deleteContact = (req, res) => {
+  const id = req.params.id;
 
-//   Contact.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
-//     .then((data) => {
-//       if (!data) {
-//         res.status(404).send({
-//           message: `Cannot update contact with id=${id}. Maybe contact was not found!`,
-//         });
-//       } else res.send({ message: 'Contact was updated successfully.' });
-//     })
-//     .catch((err) => {
-//       res.status(500).send({
-//         message: 'Error updating contact with id=' + id,
-//       });
-//     });
-// };
+  Contact.findByIdAndRemove(id)
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot delete contact with id=${id}. Maybe the contact was not found!`,
+        });
+      } else {
+        res.send({
+          message: 'Contact was deleted successfully!',
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: 'Could not delete contact with id=' + id,
+      });
+    });
+};
+
+// Delete all contacts from the database.
+exports.deleteAllContact = (req, res) => {
+  Contact.deleteMany({})
+    .then((data) => {
+      res.send({
+        message: `${data.deletedCount} contacts were deleted successfully!`,
+      });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message:
+          err.message || 'Some error occurred while removing all contacts.',
+      });
+    });
+};
 
 

@@ -13,8 +13,11 @@ routes.post('/contacts/', contacts.createContact);
 // PUT /contacts
 routes.put('/contacts/:id', contacts.updateContact);
 
-// // DELETE /contacts
-// routes.delete('/contacts/:id', contacts.deleteContact);
+// DELETE /contacts
+routes.delete('/contacts/:id', contacts.deleteContact);
+
+// DELETE /contacts
+routes.delete('/contacts/:id', contacts.deleteAllContact);
 
 
 module.exports = routes;

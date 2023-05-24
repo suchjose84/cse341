@@ -19,6 +19,20 @@
       "email": "yosemite.sam@example.com",
       "favoriteColor": "red",
       "birthday": "1945-11-17"
+    },
+    {
+      "firstName": "Pepe",
+      "lastName": "Le Pew",
+      "email": "pepe.lepew@example.com",
+      "favoriteColor": "black",
+      "birthday": "1945-1-6"
+    },
+    {
+      "firstName": "Tweety",
+      "lastName": "Pie",
+      "email": "tweety.pie@example.com",
+      "favoriteColor": "yellow",
+      "birthday": "1942-11-21"
     }
 ]
   

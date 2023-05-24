@@ -7,9 +7,10 @@ module.exports = (mongoose) => {
           lastName: String,
           email: String,
           favoriteColor: String,
-          birthday: Date,
+          birthday: String
         },
-        { timestamps: true }
+        { timestamps: false,
+          versionKey: false}
       )
     );
   

@@ -1,38 +1,43 @@
-[
-    {
-      "firstName": "Bugs",
-      "lastName": "Bunny",
-      "email": "bugs.bunny@example.com",
-      "favoriteColor": "gray",
-      "birthday": "1938-04-30"
-    },
-    {
-      "firstName": "Daffy",
-      "lastName": "Duck",
-      "email": "daffy.duck@example.com",
-      "favoriteColor": "black",
-      "birthday": "1937-04-17"
-    },
-    {
-      "firstName": "Yosemite",
-      "lastName": "Sam",
-      "email": "yosemite.sam@example.com",
-      "favoriteColor": "red",
-      "birthday": "1945-11-17"
-    },
-    {
-      "firstName": "Pepe",
-      "lastName": "Le Pew",
-      "email": "pepe.lepew@example.com",
-      "favoriteColor": "black",
-      "birthday": "1945-1-6"
-    },
-    {
-      "firstName": "Tweety",
-      "lastName": "Pie",
-      "email": "tweety.pie@example.com",
-      "favoriteColor": "yellow",
-      "birthday": "1942-11-21"
-    }
-]
-  
+[{
+  "firstName": "Bugs",
+  "lastName": "Bunny",
+  "email": "bugs.bunny@example.com",
+  "favoriteColor": "gray",
+  "birthday": "1938-04-30"
+}, {
+  "firstName": "Daffy",
+  "lastName": "Duck",
+  "email": "daffy.duck@example.com",
+  "favoriteColor": "black",
+  "birthday": "1937-04-17"
+}, {
+  "firstName": "Yosemite",
+  "lastName": "Sam",
+  "email": "yosemite.sam@example.com",
+  "favoriteColor": "red",
+  "birthday": "1945-11-17"
+}, {
+  "firstName": "Pepe",
+  "lastName": "Le Pew",
+  "email": "pepe.lepew@example.com",
+  "favoriteColor": "black",
+  "birthday": "1945-1-6"
+}, {
+  "firstName": "Tweety",
+  "lastName": "Pie",
+  "email": "tweety.pie@example.com",
+  "favoriteColor": "yellow",
+  "birthday": "1942-11-21"
+}, {
+  "firstName": "Wile",
+  "lastName": "Coyote",
+  "email": "wile.coyote@example.com",
+  "favoriteColor": "gray",
+  "birthday": "1937-9-29"
+}, {
+  "firstName": "Road",
+  "lastName": "Runner",
+  "email": "road.runner@example.com",
+  "favoriteColor": "brown",
+  "birthday": "1949-10-15"
+}]

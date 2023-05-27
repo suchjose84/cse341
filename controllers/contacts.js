@@ -91,30 +91,6 @@ exports.createContact = (req, res) => {
     });
 };
 
-// exports.updateContact = (req, res) => {
-//   const apiKey = req.query.apiKey; // Extract the API key from the query parameter
-
-//   const { id } = req.params;
-//   const updateData = req.body;
-
-//   if (apiKey !== 'Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N') {
-//     return res.status(401).send('Unauthorized');
-//   }
-
-//   Contact.findByIdAndUpdate(id, updateData, { new: true })
-//     .then((updatedContact) => {
-//       if (!updatedContact) {
-//         return res.status(404).send('Contact not found');
-//       }
-//       res.send(updatedContact);
-//     })
-//     .catch((error) => {
-//       res.status(500).send({
-//         message: error.message || 'Error updating the contact',
-//       });
-//     });
-// };
-
 // Update a contact by the id in the request
 exports.updateContact = (req, res) => {
   if (!req.body) {

@@ -17,7 +17,7 @@ routes.put('/contacts/:id', contactsController.updateContact);
 routes.delete('/contacts/:id', contactsController.deleteContact);
 
 // DELETE /contacts
-// routes.delete('/contacts/', contactsController.deleteAllContact);
+routes.delete('/contacts/', contactsController.deleteAll);
 
 
 module.exports = routes;

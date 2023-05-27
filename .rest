@@ -31,8 +31,14 @@ content-type: application/json
     "favoriteColor":"blue",
     "birthday":"1945-1-6"
 }
-### DELETE contact
-DELETE http://localhost:3000/contacts/:id HTTP/1.1
+
+### DELETE a contact
+DELETE http://localhost:3000/contacts/647192e5f5a2687dd8d1ad19 HTTP/1.1
+
+### DELETE all contacts
+DELETE http://localhost:3000/contacts HTTP/1.1
+
+
 
 // Render.com
 ### Get all contacts
@@ -71,3 +77,6 @@ content-type: application/json
 
 ### DELETE contact
 DELETE https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
+
+### DELETE all contacts
+DELETE https://cse341-mw5a.onrender.com/contacts HTTP/1.1

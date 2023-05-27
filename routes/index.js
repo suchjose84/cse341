@@ -5,7 +5,7 @@ routes.use('/', require('./swagger'));
 routes.use('/', contact);
 routes.use('/', (docData = (req, res) => {
     let docData = {
-      documentationURL: 'https://nathanbirch.github.io/nathan-byui-api-docs',
+      documentationURL: 'https://cse341-mw5a.onrender.com/api-docs',
     };
     res.send(docData);
   })

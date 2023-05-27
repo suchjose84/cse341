@@ -4,7 +4,7 @@ GET http://localhost:3000/contacts
 
 
 ### Get contact by id
-GET http://localhost:8080/contacts/647031112c1f3a05487b6b72
+GET http://localhost:3000/contacts/:id
 
 
 ### Create contact
@@ -21,7 +21,7 @@ content-type: application/json
 
 
 ### PUT contact
-PUT http://localhost:3000/647031112c1f3a05487b6b72 HTTP/1.1
+PUT http://localhost:3000/:id HTTP/1.1
 content-type: application/json
 
 {
@@ -32,42 +32,42 @@ content-type: application/json
     "birthday":"1945-1-6"
 }
 ### DELETE contact
-DELETE http://localhost:8080/contacts/647031112c1f3a05487b6b72 HTTP/1.1
+DELETE http://localhost:3000/contacts/:id HTTP/1.1
 
 // Render.com
 ### Get all contacts
-GET https://cse341-instructor.herokuapp.com/contacts
+GET https://cse341-mw5a.onrender.com/contacts
 
 
 ### Get contact by id
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b3
+GET https://cse341-mw5a.onrender.com/contacts/:id
 
 
-### Create contact
-POST https://cse341-instructor.herokuapp.com/contacts HTTP/1.1
+### Add contact
+POST https://cse341-mw5a.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "firstName":"Pepe",
+    "lastName":"Le Pew",
+    "email":"pepe.lepew@example.com",
+    "favoriteColor":"blue",
+    "birthday":"1945-1-6"
 }
 
 
 ### PUT contact
-PUT https://cse341-instructor.herokuapp.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
+    "firstName":"Pepe",
+    "lastName":"Le Pew",
+    "email":"pepe.lepew@example.com",
+    "favoriteColor":"black",
+    "birthday":"1945-1-6"
 }
 
 
 ### DELETE contact
-DELETE https://cse341-instructor.herokuapp.com/contacts/6220e34083149913680f9a64 HTTP/1.1
+DELETE https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1

@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/api": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],

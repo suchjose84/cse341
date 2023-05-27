@@ -21,14 +21,14 @@ content-type: application/json
 
 
 ### PUT contact
-PUT http://localhost:3000/:id HTTP/1.1
+PUT http://localhost:3000/contacts/:id HTTP/1.1
 content-type: application/json
 
 {
     "firstName":"Jose",
     "lastName":"Such",
     "email":"jose.such@example.com",
-    "favoriteColor":"white",
+    "favoriteColor":"green",
     "birthday":"1984-04-22"
 }
 

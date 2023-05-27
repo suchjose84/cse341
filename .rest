@@ -12,11 +12,11 @@ POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Road",
-    "lastName":"Runner",
-    "email":"road.runner@example.com",
-    "favoriteColor":"blue",
-    "birthday":"1949-10-15"
+    "firstName":"Jose",
+    "lastName":"Such",
+    "email":"jose.such@example.com",
+    "favoriteColor":"none",
+    "birthday":"1984-04-22"
 }
 
 
@@ -25,11 +25,11 @@ PUT http://localhost:3000/:id HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Pepe",
-    "lastName":"Le Pew",
-    "email":"pepe.lepew@example.com",
-    "favoriteColor":"blue",
-    "birthday":"1945-1-6"
+    "firstName":"Jose",
+    "lastName":"Such",
+    "email":"jose.such@example.com",
+    "favoriteColor":"white",
+    "birthday":"1984-04-22"
 }
 
 ### DELETE a contact
@@ -54,11 +54,11 @@ POST https://cse341-mw5a.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"any",
-    "lastName":"any",
-    "email":"any.any@example.com",
-    "favoriteColor":"any",
-    "birthday":"any"
+    "firstName":"Jose",
+    "lastName":"Such",
+    "email":"jose.such@example.com",
+    "favoriteColor":"none",
+    "birthday":"1984-04-22"
 }
 
 
@@ -67,11 +67,11 @@ PUT https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"any",
-    "lastName":"any",
-    "email":"any.any@example.com",
-    "favoriteColor":"any",
-    "birthday":"any"
+    "firstName":"Jose",
+    "lastName":"Such",
+    "email":"jose.such@example.com",
+    "favoriteColor":"white",
+    "birthday":"1984-04-22"
 }
 
 

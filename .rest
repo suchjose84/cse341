@@ -4,7 +4,7 @@ GET http://localhost:3000/contacts HTTP/1.1
 
 
 ### Get contact by id
-GET http://localhost:3000/contacts/:id HTTP/1.1
+GET http://localhost:3000/contacts/6471a51740e061e7105fa9df HTTP/1.1
 
 
 ### Create contact
@@ -21,7 +21,7 @@ content-type: application/json
 
 
 ### PUT contact
-PUT http://localhost:3000/contacts/:id HTTP/1.1
+PUT http://localhost:3000/contacts/647235a527a6fa90ae8be4c5 HTTP/1.1
 content-type: application/json
 
 {
@@ -33,7 +33,11 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://localhost:3000/contacts/:id HTTP/1.1
+DELETE http://localhost:3000/contacts/647235a527a6fa90ae8be4c5 HTTP/1.1
+
+
+### DELETE all contacts
+DELETE http://localhost:3000/contacts/ HTTP/1.1
 
 // Using Render.com
 ### Get all contacts
@@ -41,7 +45,7 @@ GET https://cse341-mw5a.onrender.com/contacts HTTP/1.1
 
 
 ### Get contact by id
-GET http://localhost:3000/contacts/:id HTTP/1.1
+GET https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
 
 
 ### Create contact
@@ -65,7 +69,7 @@ content-type: application/json
       "firstName": "Jose",
       "lastName": "Such",
       "email": "jose.such@example.com",
-      "favoriteColor": "None",
+      "favoriteColor": "green",
       "birthday": "1984-04-22"
 }
 

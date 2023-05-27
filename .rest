@@ -45,7 +45,7 @@ GET https://cse341-mw5a.onrender.com/contacts HTTP/1.1
 
 
 ### Get contact by id
-GET https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
+GET https://cse341-mw5a.onrender.com/contacts/6471a51740e061e7105fa9df HTTP/1.1
 
 
 ### Create contact
@@ -62,7 +62,7 @@ content-type: application/json
 
 
 ### PUT contact
-PUT https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
+PUT https://cse341-mw5a.onrender.com/contacts/64723767533c9ddfe9f22c37 HTTP/1.1
 content-type: application/json
 
 {
@@ -75,7 +75,7 @@ content-type: application/json
 
 
 ### DELETE contact
-DELETE https://cse341-mw5a.onrender.com/contacts/:id HTTP/1.1
+DELETE https://cse341-mw5a.onrender.com/contacts/64723767533c9ddfe9f22c37 HTTP/1.1
 
 ### DELETE all contact
 DELETE https://cse341-mw5a.onrender.com/contacts HTTP/1.1

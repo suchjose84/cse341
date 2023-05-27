@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 const app = express();
+
 
 app
   .use(bodyParser.json())
@@ -13,6 +15,7 @@ app
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
+  .use(cors())
   .use('/', require('./routes'));
 
 mongodb.initDb((err) => {

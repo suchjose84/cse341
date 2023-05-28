@@ -12,9 +12,13 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-      "firstName": "Jose",
-      "lastName": "Such",
-      "email": "jose.such@example.com",
-      "favoriteColor": "None",
-      "birthday": "1984-04-22"
+      "firstName": "any",
+      "lastName": "any",
+      "userName": "anyany123",
+      "email": "any",
+      "password": "any",
+      "birthDate": "0000-00-00",
+      "phone": "any",
+      "country": "any",
+      "profileImg": "link"
 }

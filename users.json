@@ -1,36 +1,44 @@
 [{
   "firstName": "Jose",
   "lastName": "Such",
+  "userName": "suchjose84",
   "email": "suchjose@live.com",
   "password": "lithuania",
+  "birthDate": "1984-04-22",
   "phone": "9983868357",
   "country": "philippines",
-  "userLevel": "3"
+  "profileImg": "link"
 },
 {
   "firstName": "any",
   "lastName": "any",
+  "userName": "anyany123",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
-  "userLevel": "any"
+  "profileImg": "link"
 },
 {
   "firstName": "any",
   "lastName": "any",
+  "userName": "anyany1234",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
-  "userLevel": "any"
+  "profileImg": "link"
 },
 {
   "firstName": "any",
   "lastName": "any",
+  "userName": "anyany12345",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
-  "userLevel": "any"
+  "profileImg": "link"
 }]

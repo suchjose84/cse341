@@ -4,6 +4,7 @@
   "userName": "suchjose84",
   "email": "suchjose@live.com",
   "password": "lithuania",
+  "birthDate": "1984-04-22",
   "phone": "9983868357",
   "country": "philippines",
   "profileImg": "link"
@@ -14,6 +15,7 @@
   "userName": "anyany123",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
   "profileImg": "link"
@@ -24,6 +26,7 @@
   "userName": "anyany1234",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
   "profileImg": "link"
@@ -34,6 +37,7 @@
   "userName": "anyany12345",
   "email": "any",
   "password": "any",
+  "birthDate": "0000-00-00",
   "phone": "any",
   "country": "any",
   "profileImg": "link"

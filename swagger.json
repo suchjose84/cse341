@@ -60,13 +60,13 @@
             "schema": {
               "type": "object",
               "properties": {
+                "userName": {
+                  "example": "any"
+                },
                 "firstName": {
                   "example": "any"
                 },
                 "lastName": {
-                  "example": "any"
-                },
-                "userName": {
                   "example": "any"
                 },
                 "email": {

@@ -34,9 +34,9 @@ exports.getUserById = async (req, res, next) => {
 exports.addUser = async (req, res, next) => {
   try {
     const contact = {
+      userName: req.body.userName,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      userName: req.body.userName,
       email: req.body.email,
       password: req.body.password,
       birthDate: req.body.birthDate,

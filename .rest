@@ -1,10 +1,10 @@
 // LOCALHOST
-### Get all contacts
+### Get all user data
 GET http://localhost:3000/users HTTP/1.1
 
 
-### Get contact by id
-GET http://localhost:3000/users/:id HTTP/1.1
+### Get user by username
+GET http://localhost:3000/users/:username HTTP/1.1
 
 
 ### Create contact
@@ -12,9 +12,9 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
+      "userName": "anyany123",
       "firstName": "any",
       "lastName": "any",
-      "userName": "anyany123",
       "email": "any",
       "password": "any",
       "birthDate": "0000-00-00",

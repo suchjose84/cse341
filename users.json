@@ -1,7 +1,7 @@
 [{
+  "userName": "suchjose84",
   "firstName": "Jose",
   "lastName": "Such",
-  "userName": "suchjose84",
   "email": "suchjose@live.com",
   "password": "lithuania",
   "birthDate": "1984-04-22",
@@ -10,9 +10,9 @@
   "profileImg": "link"
 },
 {
-  "firstName": "any",
-  "lastName": "any",
   "userName": "anyany123",
+  "firstName": "any",
+  "lastName": "any",
   "email": "any",
   "password": "any",
   "birthDate": "0000-00-00",
@@ -21,9 +21,9 @@
   "profileImg": "link"
 },
 {
-  "firstName": "any",
-  "lastName": "any",
   "userName": "anyany1234",
+  "firstName": "any",
+  "lastName": "any",
   "email": "any",
   "password": "any",
   "birthDate": "0000-00-00",
@@ -32,9 +32,9 @@
   "profileImg": "link"
 },
 {
+  "userName": "anyany12345",
   "firstName": "any",
   "lastName": "any",
-  "userName": "anyany12345",
   "email": "any",
   "password": "any",
   "birthDate": "0000-00-00",

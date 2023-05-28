@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Contact API",
+    "description": "Users API",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -11,14 +11,14 @@
     "http"
   ],
   "paths": {
-    "/api_docs": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],
         "responses": {}
       }
     },
-    "/contacts": {
+    "/users": {
       "get": {
         "description": "",
         "parameters": [],
@@ -29,7 +29,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/users/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -48,65 +48,9 @@
             "description": "Not Found"
           }
         }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          }
-        }
       }
     },
-    "/contacts/": {
+    "/users/": {
       "post": {
         "description": "",
         "parameters": [
@@ -122,13 +66,22 @@
                 "lastName": {
                   "example": "any"
                 },
+                "userName": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "password": {
                   "example": "any"
                 },
-                "birthday": {
+                "phone": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                },
+                "profileImg": {
                   "example": "any"
                 }
               }
@@ -138,15 +91,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "204": {
-            "description": "No Content"
           }
         }
       }

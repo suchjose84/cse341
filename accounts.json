@@ -1,0 +1,40 @@
+[{
+  "firstName": "Jose",
+  "lastName": "Such",
+  "userName": "suchjose84",
+  "email": "suchjose@live.com",
+  "password": "lithuania",
+  "phone": "9983868357",
+  "country": "philippines",
+  "profileImg": "link"
+},
+{
+  "firstName": "any",
+  "lastName": "any",
+  "userName": "anyany123",
+  "email": "any",
+  "password": "any",
+  "phone": "any",
+  "country": "any",
+  "profileImg": "link"
+},
+{
+  "firstName": "any",
+  "lastName": "any",
+  "userName": "anyany1234",
+  "email": "any",
+  "password": "any",
+  "phone": "any",
+  "country": "any",
+  "profileImg": "link"
+},
+{
+  "firstName": "any",
+  "lastName": "any",
+  "userName": "anyany12345",
+  "email": "any",
+  "password": "any",
+  "phone": "any",
+  "country": "any",
+  "profileImg": "link"
+}]

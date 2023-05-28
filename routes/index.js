@@ -1,5 +1,5 @@
 const routes = require('express').Router();
-const contact = require('./contacts');
+const contact = require('./users');
 
 routes.use('/', require('./swagger'));
 routes.use('/', contact);

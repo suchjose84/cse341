@@ -53,6 +53,7 @@ exports.addUser = async (req, res, next) => {
   }
 };
 
+//edit 1 user
 exports.editUser = async (req, res, next) => {
   try {
     const userName = req.params.userName;
@@ -78,3 +79,23 @@ exports.editUser = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.deleteUser = async (req, res, next) => {
+  const userName = req.params.userName;
+  try {
+    const result = await mongodb.getDb().db('eggsandmore').collection('users').deleteOne({ userName });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).json({
+        message: 'User not found'
+      });
+    }
+
+    res.status(200).json({
+      message: 'User deleted successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+

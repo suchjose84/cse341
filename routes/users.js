@@ -13,5 +13,8 @@ routes.post('/users', usersController.addUser);
 // PUT /contacts
 routes.put('/users/:userName', usersController.editUser);
 
+// DELETE /contacts
+routes.delete('/users/:userName', usersController.deleteUser);
+
 
 module.exports = routes;

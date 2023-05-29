@@ -14,11 +14,11 @@ exports.getAllUsers = async (req, res, next) => {
 
 };
 //get 1 user
-exports.getUserById = async (req, res, next) => {
-  const userId = req.params.id;
+exports.getUser = async (req, res, next) => {
+  const userName = req.params.userName;
   try {
     const user = await mongodb.getDb().db('eggsandmore').collection('users').findOne({
-      _id: new ObjectId(userId)
+      _id: new ObjectId(userName)
     });
     if (!user) {
       return res.status(404).json({

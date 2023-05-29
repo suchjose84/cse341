@@ -5,10 +5,10 @@ const usersController = require('../controllers/usersController.js');
 routes.get('/users', usersController.getAllUsers);
 
 // GET /contacts/:id
-routes.get('/users/:id', usersController.getUserById);
+routes.get('/users/:userName', usersController.getUser);
 
 // POST /contacts
-routes.post('/users/', usersController.addUser);
+routes.post('/users', usersController.addUser);
 
 
 module.exports = routes;

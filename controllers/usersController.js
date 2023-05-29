@@ -4,6 +4,16 @@ const {
 } = require('mongodb');
 
 //get all user data
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: Get all users
+ *     description: Retrieve a list of all users.
+ *     responses:
+ *       200:
+ *         description: Successful operation
+ */
 exports.getAllUsers = async (req, res, next) => {
   try {
     const users = await mongodb.getDb().db('eggsandmore').collection('users').find().toArray();

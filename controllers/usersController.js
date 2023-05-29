@@ -109,22 +109,22 @@ exports.deleteUser = async (req, res, next) => {
   }
 };
 
-exports.deleteAllUsers = async (req, res, next) => {
-  try {
-    const result = await mongodb.getDb().db('eggsandmore').collection('users').deleteMany({});
+// exports.deleteAllUsers = async (req, res, next) => {
+//   try {
+//     const result = await mongodb.getDb().db('eggsandmore').collection('users').deleteMany({});
 
-    if (result.deletedCount === 0) {
-      return res.status(404).json({
-        message: 'No users found'
-      });
-    }
+//     if (result.deletedCount === 0) {
+//       return res.status(404).json({
+//         message: 'No users found'
+//       });
+//     }
 
-    res.status(200).json({
-      message: 'All users deleted successfully'
-    });
-  } catch (error) {
-    next(error);
-  }
-};
+//     res.status(200).json({
+//       message: 'All users deleted successfully'
+//     });
+//   } catch (error) {
+//     next(error);
+//   }
+// };
 
 

@@ -73,18 +73,6 @@
             "description": "Created"
           }
         }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
       }
     },
     "/users/{userName}": {

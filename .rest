@@ -12,11 +12,11 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "anyany123",
-      "firstName": "any",
-      "lastName": "any",
-      "email": "any",
-      "password": "any",
+      "userName": "jaredrobin",
+      "firstName": "Jared Robin",
+      "lastName": "Such",
+      "email": "killer123@example.com",
+      "password": "england",
       "birthDate": "0000-00-00",
       "phone": "any",
       "country": "any",
@@ -47,13 +47,13 @@ content-type: application/json
 DELETE http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
-// Render
+// RENDER.COM
 ### Get all user data
 GET https://cse341-mw5a.onrender.com/users HTTP/1.1
 
 
 ### Get user by username
-GET https://cse341-mw5a.onrender.com/users/:username HTTP/1.1
+GET https://cse341-mw5a.onrender.com/users/anyany1234 HTTP/1.1
 
 
 ### Create contact
@@ -61,11 +61,11 @@ POST https://cse341-mw5a.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "anyany123",
-      "firstName": "any",
-      "lastName": "any",
-      "email": "any",
-      "password": "any",
+      "userName": "jaredrobin",
+      "firstName": "Jared Robin",
+      "lastName": "Such",
+      "email": "killer123@example.com",
+      "password": "england",
       "birthDate": "0000-00-00",
       "phone": "any",
       "country": "any",

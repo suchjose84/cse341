@@ -5,7 +5,7 @@ const doc = {
     title: 'Eggs and More',
     description: 'Trading API'
   },
-  host: 'localhost',
+  host: 'localhost:3000',
   schemes: ['http']
 };
 

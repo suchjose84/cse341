@@ -16,5 +16,8 @@ routes.put('/users/:userName', usersController.editUser);
 // DELETE /contacts
 routes.delete('/users/:userName', usersController.deleteUser);
 
+// DELETE /contacts
+routes.delete('/users', usersController.deleteAllUsers);
+
 
 module.exports = routes;

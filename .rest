@@ -22,3 +22,28 @@ content-type: application/json
       "country": "any",
       "profileImg": "link"
 }
+
+// LOCALHOST
+### Get all user data
+GET http://localhost:3000/users HTTP/1.1
+
+
+### Get user by username
+GET http://localhost:3000/users/:username HTTP/1.1
+
+
+### Create contact
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+      "userName": "anyany123",
+      "firstName": "any",
+      "lastName": "any",
+      "email": "any",
+      "password": "any",
+      "birthDate": "0000-00-00",
+      "phone": "any",
+      "country": "any",
+      "profileImg": "link"
+}

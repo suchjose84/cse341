@@ -10,5 +10,8 @@ routes.get('/users/:userName', usersController.getUser);
 // POST /contacts
 routes.post('/users', usersController.addUser);
 
+// PUT /contacts
+routes.put('/users/:userName', usersController.editUser);
+
 
 module.exports = routes;

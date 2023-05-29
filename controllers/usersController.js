@@ -52,3 +52,29 @@ exports.addUser = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.editUser = async (req, res, next) => {
+  try {
+    const userName = req.params.userName;
+    const updatedUser = {
+      userName: req.body.userName,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: req.body.password,
+      birthDate: req.body.birthDate,
+      phone: req.body.phone,
+      country: req.body.country,
+      profileImg: req.body.profileImg
+    };
+
+    const result = await mongodb
+      .getDb().db('eggsandmore').collection('users').updateOne({ userName }, { $set: updatedUser });
+
+    res.status(200).json({
+      message: 'User updated successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};

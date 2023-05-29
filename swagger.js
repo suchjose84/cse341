@@ -8,7 +8,6 @@ const doc = {
   host: 'cse341-mw5a.onrender.com',
   schemes: ['https']
 };
-
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];
 

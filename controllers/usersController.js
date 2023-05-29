@@ -17,9 +17,7 @@ exports.getAllUsers = async (req, res, next) => {
 exports.getUser = async (req, res, next) => {
   const userName = req.params.userName;
   try {
-    const user = await mongodb.getDb().db('eggsandmore').collection('users').findOne({
-      _id: new ObjectId(userName)
-    });
+    const user = await mongodb.getDb().db('eggsandmore').collection('users').findOne({userName: new ObjectId(userName)});
     if (!user) {
       return res.status(404).json({
         message: 'Contact not found'

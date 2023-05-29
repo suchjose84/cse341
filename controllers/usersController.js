@@ -31,7 +31,7 @@ exports.getUser = async (req, res, next) => {
 //create 1 user
 exports.addUser = async (req, res, next) => {
   try {
-    const contact = {
+    const user = {
       userName: req.body.userName,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -43,9 +43,10 @@ exports.addUser = async (req, res, next) => {
       profileImg: req.body.profileImg
 
     };
-    const result = await mongodb.getDb().db('eggsandmore').collection('users').insertOne(contact);
+    const result = await mongodb.getDb().db('eggsandmore').collection('users').insertOne(user);
     res.status(201).json({
-      id: result.insertedId
+      id: result.insertedId,
+      userName: user.userName
     });
   } catch (error) {
     next(error);

@@ -12,40 +12,37 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-      "username": "jaredrobin",
-      "firstName": "Jared Robin",
-      "lastName": "Such",
-      "email": "killer123@example.com",
-      "password": "england",
-      "birthDate": "0000-00-00",
+      "username": "anyany7",
+      "firstName": "any",
+      "lastName": "any",
+      "email": "anyany7@example.com",
+      "password": "Password1234!",
+      "birthDate": "any",
       "phone": "any",
       "country": "any",
-      "profileImg": "link"
+      "profileImg": "any"
 }
 
 ### Edit contact
-PUT http://localhost:3000/users/:username HTTP/1.1
+PUT http://localhost:3000/users/anyany7 HTTP/1.1
 content-type: application/json
 
 {
-      "username": "anyany123",
+      "username": "anyany7",
       "firstName": "any",
       "lastName": "any",
-      "email": "any",
-      "password": "any",
-      "birthDate": "0000-00-00",
+      "email": "anyany7@example.com",
+      "password": "Password123!",
+      "birthDate": "any",
       "phone": "any",
       "country": "any",
-      "profileImg": "link"
+      "profileImg": "any"
 }
 
 ### DELETE contact
-DELETE http://localhost:3000/users/joebert914 HTTP/1.1
+DELETE http://localhost:3000/users/anyany7 HTTP/1.1
 content-type: application/json
 
-### DELETE all contacts
-DELETE http://localhost:3000/users HTTP/1.1
-content-type: application/json
 
 // RENDER.COM
 ### Get all user data
@@ -53,7 +50,7 @@ GET https://cse341-mw5a.onrender.com/users HTTP/1.1
 
 
 ### Get user by username
-GET https://cse341-mw5a.onrender.com/users/suchjose84 HTTP/1.1
+GET https://cse341-mw5a.onrender.com/users/anyany6 HTTP/1.1
 
 
 ### Create contact
@@ -61,37 +58,33 @@ POST https://cse341-mw5a.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-      "username": "jaredrobin",
-      "firstName": "Jared Robin",
-      "lastName": "Such",
-      "email": "killer123@example.com",
-      "password": "england",
-      "birthDate": "0000-00-00",
+      "username": "anyany7",
+      "firstName": "any",
+      "lastName": "any",
+      "email": "anyany7@example.com",
+      "password": "Password1234!",
+      "birthDate": "any",
       "phone": "any",
       "country": "any",
-      "profileImg": "link"
+      "profileImg": "any"
 }
 
 ### Edit contact
-PUT https://cse341-mw5a.onrender.com/users/jaredrobin HTTP/1.1
+PUT https://cse341-mw5a.onrender.com/users/anyany7 HTTP/1.1
 content-type: application/json
 
 {
-      "username": "jaredrobin",
+      "username": "anyany7",
       "firstName": "any",
-      "lastName": "mail",
-      "email": "any",
-      "password": "thailand",
-      "birthDate": "0000-00-00",
+      "lastName": "any",
+      "email": "anyany7@example.com",
+      "password": "Password123!",
+      "birthDate": "any",
       "phone": "any",
       "country": "any",
-      "profileImg": "link"
+      "profileImg": "any"
 }
 
 ### DELETE contact
-DELETE https://dashboard.render.com/users/such8422 HTTP/1.1
+DELETE https://cse341-mw5a.onrender.com/users/anyany7 HTTP/1.1
 content-type: application/json
-
-# ### DELETE all contacts
-# DELETE https://cse341-mw5a.onrender.com/users HTTP/1.1
-# content-type: application/json

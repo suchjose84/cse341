@@ -4,7 +4,7 @@ GET http://localhost:3000/users HTTP/1.1
 
 
 ### Get user by username
-GET http://localhost:3000/users/:userName HTTP/1.1
+GET http://localhost:3000/users/joebert914 HTTP/1.1
 
 
 ### Create contact
@@ -12,7 +12,7 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "jaredrobin",
+      "username": "jaredrobin",
       "firstName": "Jared Robin",
       "lastName": "Such",
       "email": "killer123@example.com",
@@ -24,11 +24,11 @@ content-type: application/json
 }
 
 ### Edit contact
-PUT http://localhost:3000/users/:userName HTTP/1.1
+PUT http://localhost:3000/users/:username HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "anyany123",
+      "username": "anyany123",
       "firstName": "any",
       "lastName": "any",
       "email": "any",
@@ -40,7 +40,7 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://localhost:3000/users/:userName HTTP/1.1
+DELETE http://localhost:3000/users/joebert914 HTTP/1.1
 content-type: application/json
 
 ### DELETE all contacts
@@ -53,7 +53,7 @@ GET https://cse341-mw5a.onrender.com/users HTTP/1.1
 
 
 ### Get user by username
-GET https://cse341-mw5a.onrender.com/users/anyany1234 HTTP/1.1
+GET https://cse341-mw5a.onrender.com/users/suchjose84 HTTP/1.1
 
 
 ### Create contact
@@ -61,7 +61,7 @@ POST https://cse341-mw5a.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "jaredrobin",
+      "username": "jaredrobin",
       "firstName": "Jared Robin",
       "lastName": "Such",
       "email": "killer123@example.com",
@@ -73,15 +73,15 @@ content-type: application/json
 }
 
 ### Edit contact
-PUT https://cse341-mw5a.onrender.com/users/:username HTTP/1.1
+PUT https://cse341-mw5a.onrender.com/users/jaredrobin HTTP/1.1
 content-type: application/json
 
 {
-      "userName": "anyany123",
+      "username": "jaredrobin",
       "firstName": "any",
-      "lastName": "any",
+      "lastName": "mail",
       "email": "any",
-      "password": "any",
+      "password": "thailand",
       "birthDate": "0000-00-00",
       "phone": "any",
       "country": "any",
@@ -89,7 +89,7 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE https://cse341-mw5a.onrender.com/users/:username HTTP/1.1
+DELETE https://dashboard.render.com/users/such8422 HTTP/1.1
 content-type: application/json
 
 # ### DELETE all contacts

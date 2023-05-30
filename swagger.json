@@ -5,7 +5,7 @@
     "description": "Trading API",
     "version": "1.0.0"
   },
-  "host": "cse341-mw5a.onrender.com",
+  "host": "week6personal.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -25,6 +25,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -37,19 +40,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "userName": {
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                },
+                "username": {
                   "example": "any"
                 },
                 "firstName": {
                   "example": "any"
                 },
                 "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "password": {
                   "example": "any"
                 },
                 "birthDate": {
@@ -71,16 +74,22 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
     },
-    "/users/{userName}": {
+    "/users/{username}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "userName",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"
@@ -92,6 +101,9 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -99,7 +111,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "userName",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"
@@ -110,19 +122,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "userName": {
-                  "example": "any"
-                },
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
+                "username": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
                 "password": {
+                  "example": "any"
+                },
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "birthDate": {
@@ -144,6 +156,18 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -151,18 +175,24 @@
         "description": "",
         "parameters": [
           {
-            "name": "userName",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

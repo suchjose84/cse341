@@ -5,7 +5,7 @@
     "description": "Trading API",
     "version": "1.0.0"
   },
-  "host": "week6personal.onrender.com",
+  "host": "cse341-mw5a.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

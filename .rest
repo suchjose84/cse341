@@ -77,7 +77,7 @@ content-type: application/json
       "username": "anyany7",
       "firstName": "any",
       "lastName": "any",
-      "email": "anyany7@example.com",
+      "email": "anyany8@example.com",
       "password": "Password123!",
       "birthDate": "any",
       "phone": "any",

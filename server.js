@@ -14,9 +14,6 @@ app.use((req, res, next) => {
 //connects to auth0
 app.use(auth(authConfig.config));
 
-// app.get('/profile', requiresAuth(), (req, res) => {
-//   res.send(JSON.stringify(req.oidc.user));
-// });
 app.use('/', require('./routes'));
 
 const db = require('./models');

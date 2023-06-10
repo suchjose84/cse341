@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const {auth, requiresAuth} = require('express-openid-connect');
+const {auth} = require('express-openid-connect');
 const authConfig = require('./config/auth0.config.js');
 const port = process.env.PORT || 3000;
 

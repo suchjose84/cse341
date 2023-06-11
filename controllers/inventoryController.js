@@ -56,14 +56,22 @@ module.exports.getItemsByClassification = async (req, res, next) => {
 
 module.exports.addItem = async (req, res) => {
   try {
+    const { username, itemName, price, classification, remaining, unit } = req.body;
+
+    // Check if the username exists in the database
+    const user = await User.findOne({ username: username });
+    if (!user) {
+      res.status(404).send({ message: 'User not found' });
+      return;
+    }
 
     const newItem = new Inventory({
-      username: req.body.username,
-      itemName: req.body.itemName,
-      price: req.body.price,
-      classification: req.body.classification,
-      remaining: req.body.remaining,
-      unit: req.body.unit
+      username: username,
+      itemName: itemName,
+      price: price,
+      classification: classification,
+      remaining: remaining,
+      unit: unit
     });
 
     const savedItem = await newItem.save();

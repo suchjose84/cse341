@@ -1,9 +1,9 @@
 const routes = require('express').Router();
 const users = require('./users');
-// const { requiresAuth } = require('express-openid-connect');
-
+const inventory = require('./inventory');
 routes.use('/', require('./swagger'));
 routes.use('/', users);
+routes.use('/', inventory);
 routes.use('/', (req, res, next) => {
   if (req.oidc.isAuthenticated()) {
     // User is authenticated

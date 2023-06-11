@@ -6,7 +6,7 @@ const { requiresAuth } = require('express-openid-connect');
 routes.get('/inventory', requiresAuth(), inventoryController.getAllItems);
 
 // GET items by username
-routes.get('/users/inventory/:username', requiresAuth(), usersController.getItemsByUsername);
+routes.get('/users/inventory/:username', requiresAuth(), inventoryController.getItemsByUsername);
 
 // // POST create user
 // routes.post('/users', requiresAuth(), usersController.addUser);

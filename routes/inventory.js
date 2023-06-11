@@ -17,4 +17,4 @@ routes.get('/inventory', requiresAuth(), inventoryController.getAllItems);
 // // DELETE a user
 // routes.delete('/users/:username', requiresAuth(), usersController.deleteUser);
 
-// module.exports = routes;
+module.exports = routes;

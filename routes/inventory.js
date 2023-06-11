@@ -17,7 +17,7 @@ routes.post('/inventory', requiresAuth(), inventoryController.addItem);
 // PUT update and item
 routes.put('/inventory/:_id', requiresAuth(), inventoryController.editItem);
 
-// // DELETE a user
-// routes.delete('/users/:username', requiresAuth(), usersController.deleteUser);
+// DELETE a user
+routes.delete('/inventory/:_id', requiresAuth(), inventoryController.deleteItem);
 
 module.exports = routes;

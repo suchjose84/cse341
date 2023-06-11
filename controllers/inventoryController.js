@@ -86,11 +86,11 @@ module.exports.editItem = async (req, res) => {
     const itemId = req.params._id;
     const { price, remaining } = req.body;
 
-    // Validate the itemId as a valid ObjectId//
-    // if (!mongoose.Types.ObjectId.isValid(itemId)) {
-    //   res.status(400).send({ message: 'Invalid item ID' });
-    //   return;
-    // }
+    // Validate the itemId as a valid ObjectId
+    if (!mongoose.Types.ObjectId.isValid(itemId)) {
+      res.status(400).send({ message: 'Invalid item ID' });
+      return;
+    }
 
     // Find the item to be edited
     const item = await Inventory.findById(itemId);
@@ -113,24 +113,24 @@ module.exports.editItem = async (req, res) => {
 };
 
 
-// module.exports.deleteUser = async (req, res, next) => {
-//   try {
-//     const username = req.params.username;
-//     if (!username) {
-//       return res.status(400).send({ message: 'Invalid username supplied' });
-//     }
+module.exports.deleteItem = async (req, res, next) => {
+  try {
+    const itemId = req.params._id;
+    if (!itemId) {
+      return res.status(400).send({ message: 'Invalid item id supplied' });
+    }
     
-//     const result = await User.deleteOne({ username: username });
+    const result = await Inventory.deleteOne({ _id: itemId });
 
-//     if (result.deletedCount === 0) {
-//       return res.status(404).send({ message: 'User not found' });
-//     }
+    if (result.deletedCount === 0) {
+      return res.status(404).send({ message: 'Item not found' });
+    }
     
-//     res.status(204).send({message: 'User deleted'});
-//   } catch (err) {
-//     res.status(500).send({ message: 'Some error occurred while deleting the user', error: err });
-//   }
-// };
+    res.status(204).send({ message: 'Item deleted' });
+  } catch (err) {
+    res.status(500).send({ message: 'Some error occurred while deleting the item', error: err });
+  }
+};
 
 // // module.exports.deleteAll = async (req, res) => {
 // //   try {

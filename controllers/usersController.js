@@ -22,7 +22,7 @@ module.exports.getAllUsers = (req, res, next) => {
 module.exports.getUser = async (req, res, next) => {
   try {
     const username = req.params.username;
-    const user = await User.findOne({ username: username });
+    const user = await User.findOne({ username: username }).sort({username: 1});
     
     if (!user) {
       res.status(404).send({ message: 'User not found' });

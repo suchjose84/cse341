@@ -21,7 +21,25 @@ module.exports.getAllItems = async (req, res, next) => {
 module.exports.getItemsByUsername = async (req, res, next) => {
   try {
     const username = req.params.username;
-    const items = await Inventory.find({ username: username });
+    const items = await Inventory.find({ username: username }).sort({username: 1});
+    
+    if (!items || items.length === 0) {
+      res.status(404).send({ message: 'No items found using that username' });
+      return;
+    }
+    
+    res.status(200).send(items);
+  } catch (err) {
+    res.status(500).send({
+      message: err.message || 'Some error occurred while retrieving items.'
+    });
+  }
+};
+
+module.exports.getItemsByClassification = async (req, res, next) => {
+  try {
+    const classification = req.params.classification;
+    const items = await Inventory.find({ classification: classification }).sort({username: 1});
     
     if (!items || items.length === 0) {
       res.status(404).send({ message: 'No items found using that username' });

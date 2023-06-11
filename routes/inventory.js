@@ -14,8 +14,8 @@ routes.get('/inventory/:classification', requiresAuth(), inventoryController.get
 // POST create and item in the inventory
 routes.post('/inventory', requiresAuth(), inventoryController.addItem);
 
-// // PUT update user
-// routes.put('/users/:username', requiresAuth(), usersController.editUser);
+// PUT update and item
+routes.put('/inventory/:id', requiresAuth(), usersController.editItem);
 
 // // DELETE a user
 // routes.delete('/users/:username', requiresAuth(), usersController.deleteUser);

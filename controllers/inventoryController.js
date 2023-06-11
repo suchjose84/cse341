@@ -81,81 +81,41 @@ module.exports.addItem = async (req, res) => {
   }
 };
 
-// module.exports.editUser = async (req, res) => {
-//   try {
-//     const { username } = req.params;
-//     const {
-//       username: newUsername,
-//       email: newEmail,
-//       password,
-//       firstName,
-//       lastName,
-//       birthDate,
-//       phone,
-//       country,
-//       profileImg
-//     } = req.body;
+module.exports.editItem = async (req, res) => {
+  try {
+    const itemId = req.params.id;
+    const { username, itemName, price, classification, remaining, unit } = req.body;
 
-//     const { error: emailError } = emailSchema.validate(newEmail);
-//     if (emailError) {
-//       return res.status(400).send({ message: emailError.details[0].message });
-//     }
-//     const { error: passwordError } = passwordSchema.validate(password);
-//     if (passwordError) {
-//       return res.status(400).send({ message: passwordError.details[0].message });
-//     }
+    // Validate the itemId as a valid ObjectId
+    if (!mongoose.Types.ObjectId.isValid(itemId)) {
+      res.status(400).send({ message: 'Invalid item ID' });
+      return;
+    }
 
-//     if (!username) {
-//       return res.status(400).send({ message: 'Invalid username supplied' });
-//     }
+    // Find the item to be edited
+    const item = await Inventory.findById(itemId);
+    if (!item) {
+      res.status(404).send({ message: 'Item not found' });
+      return;
+    }
 
-//     const user = await User.findOne({ username });
+    // Update the item properties
+    item.username = username;
+    item.itemName = itemName;
+    item.price = price;
+    item.classification = classification;
+    item.remaining = remaining;
+    item.unit = unit;
 
-//     if (!user) {
-//       return res.status(404).send({ message: 'User not found' });
-//     }
+    // Save the modified item
+    const savedItem = await item.save();
 
-//     // checkif there are existing
-//     if (newUsername !== user.username) {
-//       const existingUsername = await User.findOne({ username: newUsername });
-//       if (existingUsername) {
-//         return res.status(409).send({ message: 'Username already exists' });
-//       }
-//       user.username = newUsername;
-//     }
-//     // checkif there are existing
-//     if (newEmail !== user.email) {
-//       const existingEmail = await User.findOne({ email: newEmail });
-//       if (existingEmail) {
-//         return res.status(409).send({ message: 'Email already exists' });
-//       }
-//       user.email = newEmail;
-//     }
+    res.status(200).send({ message: 'Item successfully edited', item: savedItem });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 
-//     if (password) {
-//       user.password = password;
-//     }
-
-//     // These lines use the logical OR (||) operator to set the values. 
-//     //The logical OR operator returns the first truthy value it encounters. In this case, if the value from the 
-//     //request body is truthy (not null, undefined, false, 0, or an empty string), it will be assigned to the 
-//     //corresponding property of the user object. Otherwise, if the value from the request body is falsy, the 
-//     //existing value of the property (user.firstName, user.lastName, etc.) will be retained.
-
-//     user.firstName = firstName || user.firstName;
-//     user.lastName = lastName || user.lastName;
-//     user.birthDate = birthDate || user.birthDate;
-//     user.phone = phone || user.phone;
-//     user.country = country || user.country;
-//     user.profileImg = profileImg || user.profileImg;
-
-//     await user.save();
-
-//     res.status(200).send(user);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// };
 
 // module.exports.deleteUser = async (req, res, next) => {
 //   try {

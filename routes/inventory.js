@@ -3,7 +3,7 @@ const inventoryController = require('../controllers/inventoryController.js');
 const { requiresAuth } = require('express-openid-connect');
 
 // GET all users
-routes.get('/inventory', inventoryController.getAllItems);
+routes.get('/inventory', requiresAuth(), inventoryController.getAllItems);
 
 // // GET a user
 // routes.get('/users/:username', requiresAuth(), usersController.getUser);

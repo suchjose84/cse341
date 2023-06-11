@@ -18,23 +18,23 @@ module.exports.getAllItems = async (req, res, next) => {
   }
 };
 
-// module.exports.getUser = async (req, res, next) => {
-//   try {
-//     const username = req.params.username;
-//     const user = await User.findOne({ username: username });
+module.exports.getItemsByUsername = async (req, res, next) => {
+  try {
+    const username = req.params.username;
+    const items = await Inventory.find({ username: username });
     
-//     if (!user) {
-//       res.status(404).send({ message: 'User not found' });
-//       return;
-//     }
+    if (!items) {
+      res.status(404).send({ message: 'No items found using that username' });
+      return;
+    }
     
-//     res.status(200).send(user);
-//   } catch (err) {
-//     res.status(500).send({
-//       message: err.message || 'Some error occurred while retrieving users.'
-//     });
-//   }
-// };
+    res.status(200).send(items);
+  } catch (err) {
+    res.status(500).send({
+      message: err.message || 'Some error occurred while retrieving items.'
+    });
+  }
+};
 
 // module.exports.addUser = async (req, res) => {
 //   try {

@@ -2,11 +2,11 @@ const routes = require('express').Router();
 const inventoryController = require('../controllers/inventoryController.js');
 const { requiresAuth } = require('express-openid-connect');
 
-// GET all users
+// GET all items in inventory
 routes.get('/inventory', requiresAuth(), inventoryController.getAllItems);
 
-// // GET a user
-// routes.get('/users/:username', requiresAuth(), usersController.getUser);
+// GET items by username
+routes.get('/users/inventory/:username', requiresAuth(), usersController.getItemsByUsername);
 
 // // POST create user
 // routes.post('/users', requiresAuth(), usersController.addUser);

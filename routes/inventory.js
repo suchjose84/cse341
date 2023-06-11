@@ -8,6 +8,9 @@ routes.get('/inventory', requiresAuth(), inventoryController.getAllItems);
 // GET items by username
 routes.get('/inventory/:username', requiresAuth(), inventoryController.getItemsByUsername);
 
+// GET items by classification
+routes.get('/inventory/:classification', requiresAuth(), inventoryController.getItemsByClassification);
+
 // // POST create user
 // routes.post('/users', requiresAuth(), usersController.addUser);
 

@@ -234,6 +234,30 @@
           }
         }
       }
+    },
+    "/inventory/{classification}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "classification",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   }
 }

@@ -23,7 +23,7 @@ module.exports.getItemsByUsername = async (req, res, next) => {
     const username = req.params.username;
     const items = await Inventory.find({ username: username });
     
-    if (!items) {
+    if (!items || items.length === 0) {
       res.status(404).send({ message: 'No items found using that username' });
       return;
     }

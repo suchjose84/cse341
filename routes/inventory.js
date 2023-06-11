@@ -11,8 +11,8 @@ routes.get('/inventory/:username', requiresAuth(), inventoryController.getItemsB
 // GET items by classification
 routes.get('/inventory/:classification', requiresAuth(), inventoryController.getItemsByClassification);
 
-// // POST create user
-// routes.post('/users', requiresAuth(), usersController.addUser);
+// POST create and item in the inventory
+routes.post('/inventory', requiresAuth(), inventoryController.addItem);
 
 // // PUT update user
 // routes.put('/users/:username', requiresAuth(), usersController.editUser);

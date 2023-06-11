@@ -39,10 +39,10 @@ module.exports.getItemsByUsername = async (req, res, next) => {
 module.exports.getItemsByClassification = async (req, res, next) => {
   try {
     const classification = req.params.classification;
-    const items = await Inventory.find({ classification: classification }).sort({username: 1});
+    const items = await Inventory.find({ classification: classification });
     
     if (!items || items.length === 0) {
-      res.status(404).send({ message: 'No items found using that username' });
+      res.status(404).send({ message: 'No items found using that classification' });
       return;
     }
     
@@ -54,57 +54,24 @@ module.exports.getItemsByClassification = async (req, res, next) => {
   }
 };
 
-// module.exports.addUser = async (req, res) => {
-//   try {
-//     const { error: emailError } = emailSchema.validate(req.body.email);
-//     if (emailError) {
-//       res.status(400).send({ message: emailError.details[0].message });
-//       return;
-//     }
+module.exports.addItem = async (req, res) => {
+  try {
 
-//     const { error: passwordError } = passwordSchema.validate(req.body.password);
-//     if (passwordError) {
-//       res.status(400).send({ message: passwordError.details[0].message });
-//       return;
-//     }
-//     if (!req.body.username || !req.body.password || !req.body.email) {
-//       res.status(400).send({ message: 'username, password, and email cannot be empty!' });
-//       return;
-//     }
+    const newItem = new Inventory({
+      username: req.body.username,
+      itemName: req.body.itemName,
+      price: req.body.price,
+      classification: req.body.classification,
+      remaining: req.body.remaining,
+      unit: req.body.unit
+    });
 
-//     const username = req.body.username;
-//     const email = req.body.email;
-
-//     const existingUser = await User.findOne({
-//       $or: [
-//         { username: username },
-//         { email: email }
-//       ]
-//     });
-
-//     if (existingUser) {
-//       res.status(400).send({ message: 'username or email already exists' });
-//       return;
-//     }
-
-//     const newUser = new User({
-//       username: req.body.username,
-//       firstName: req.body.firstName,
-//       lastName: req.body.lastName,
-//       email: req.body.email,
-//       password: req.body.password,
-//       birthDate: req.body.birthDate,
-//       phone: req.body.phone,
-//       country: req.body.country,
-//       profileImg: req.body.profileImg
-//     });
-
-//     const savedUser = await newUser.save();
-//     res.status(201).send(savedUser).send({message: 'user successfully added'});
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// };
+    const savedItem = await newItem.save();
+    res.status(201).send({ message: 'Item successfully added', item: savedItem });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 
 // module.exports.editUser = async (req, res) => {
 //   try {

@@ -2,8 +2,9 @@ const db = require('../models');
 const Inventory = db.inventory;
 
 //get all items in the inventory///
-module.exports.getAllItems = (req, res, next) => {
+module.exports.getAllItems = async (req, res, next) => {
   try {
+    console.log("hello");
     Inventory.find({})
       .then((data) => {
         res.status(200).send(data);

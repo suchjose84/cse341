@@ -83,14 +83,14 @@ module.exports.addItem = async (req, res) => {
 
 module.exports.editItem = async (req, res) => {
   try {
-    const itemId = req.params.id;
+    const itemId = req.params._id;
     const { username, itemName, price, classification, remaining, unit } = req.body;
 
     // Validate the itemId as a valid ObjectId//
-    if (!mongoose.Types.ObjectId.isValid(itemId)) {
-      res.status(400).send({ message: 'Invalid item ID' });
-      return;
-    }
+    // if (!mongoose.Types.ObjectId.isValid(itemId)) {
+    //   res.status(400).send({ message: 'Invalid item ID' });
+    //   return;
+    // }
 
     // Find the item to be edited
     const item = await Inventory.findById(itemId);

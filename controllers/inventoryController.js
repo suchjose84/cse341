@@ -86,7 +86,7 @@ module.exports.editItem = async (req, res) => {
     const itemId = req.params.id;
     const { username, itemName, price, classification, remaining, unit } = req.body;
 
-    // Validate the itemId as a valid ObjectId
+    // Validate the itemId as a valid ObjectId//
     if (!mongoose.Types.ObjectId.isValid(itemId)) {
       res.status(400).send({ message: 'Invalid item ID' });
       return;

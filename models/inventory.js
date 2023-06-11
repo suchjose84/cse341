@@ -19,7 +19,8 @@ module.exports = (mongoose) => {
         type: String
       }
     }, {
-      versionKey: false
+      versionKey: false,
+      collection: 'inventory' // Specify the custom collection name here
     }
     );
     return mongoose.model('inventory', inventorySchema);

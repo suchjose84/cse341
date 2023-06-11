@@ -28,7 +28,8 @@ module.exports = (mongoose) => {
       type: String
     }
   }, {
-    versionKey: false
+    versionKey: false,
+    collection: 'users' // Specify the custom collection name here
   }
   );
   return mongoose.model('users', userSchema);

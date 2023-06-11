@@ -1,7 +1,7 @@
 const db = require('../models');
 const Inventory = db.inventory;
 
-//get all items in the inventory
+//get all items in the inventory///
 module.exports.getAllItems = (req, res, next) => {
   try {
     Inventory.find({})

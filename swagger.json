@@ -211,7 +211,7 @@
         }
       }
     },
-    "/users/inventory/{username}": {
+    "/inventory/{username}": {
       "get": {
         "description": "",
         "parameters": [

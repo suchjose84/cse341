@@ -88,3 +88,6 @@ content-type: application/json
 ### DELETE contact
 DELETE https://cse341-mw5a.onrender.com/users/:username HTTP/1.1
 content-type: application/json
+
+### Get Inventory
+GET http://localhost:3000/inventory

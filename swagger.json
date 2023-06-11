@@ -302,12 +302,12 @@
         }
       }
     },
-    "/inventory/{id}": {
+    "/inventory/{_id}": {
       "put": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "_id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -318,22 +318,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "username": {
-                  "example": "any"
-                },
-                "itemName": {
-                  "example": "any"
-                },
                 "price": {
                   "example": "any"
                 },
-                "classification": {
-                  "example": "any"
-                },
                 "remaining": {
-                  "example": "any"
-                },
-                "unit": {
                   "example": "any"
                 }
               }
@@ -343,9 +331,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"

@@ -84,7 +84,7 @@ module.exports.addItem = async (req, res) => {
 module.exports.editItem = async (req, res) => {
   try {
     const itemId = req.params._id;
-    const { username, itemName, price, classification, remaining, unit } = req.body;
+    const { price, remaining } = req.body;
 
     // Validate the itemId as a valid ObjectId//
     // if (!mongoose.Types.ObjectId.isValid(itemId)) {
@@ -100,12 +100,8 @@ module.exports.editItem = async (req, res) => {
     }
 
     // Update the item properties
-    item.username = username;
-    item.itemName = itemName;
     item.price = price;
-    item.classification = classification;
     item.remaining = remaining;
-    item.unit = unit;
 
     // Save the modified item
     const savedItem = await item.save();

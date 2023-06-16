@@ -1,6 +1,19 @@
 const Joi = require('joi');
 const passwordComplexity = require('joi-password-complexity');
 
+const usernameSchema = Joi.string()
+  .min(5)
+  .max(30)
+  .pattern(/^[a-zA-Z][a-zA-Z0-9]*$/)
+  .required()
+  .messages({
+    'string.base': 'Username must be a string',
+    'string.empty': 'Username is required',
+    'string.min': 'Username must be at least {#limit} characters long',
+    'string.max': 'Username cannot exceed {#limit} characters',
+    'string.pattern.base': 'Username must start with a letter and can only contain letters and numbers',
+  });
+  
 const emailSchema = Joi.string().email().required();
 
 const passwordSchema = Joi.string()
@@ -30,7 +43,8 @@ const passwordSchema = Joi.string()
 
 module.exports = {
   emailSchema,
-  passwordSchema
+  passwordSchema,
+  usernameSchema
 };
 
 

@@ -13,6 +13,7 @@
   "paths": {
     "/Users": {
       "get": {
+        "tags": ["My Heading"],
         "description": "",
         "parameters": [],
         "responses": {}

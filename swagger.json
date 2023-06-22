@@ -3,7 +3,13 @@
   "info": {
     "title": "Eggs and More",
     "description": "Trading API",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "tags": [
+      {
+        "name": "User Paths",
+        "description": "CRUD Methods for Users"
+      }
+    ]
   },
   "host": "cse341-mw5a.onrender.com",
   "basePath": "/",
@@ -11,14 +17,6 @@
     "https"
   ],
   "paths": {
-    "/Users": {
-      "get": {
-        "tags": ["My Heading"],
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/users": {
       "get": {
         "description": "",

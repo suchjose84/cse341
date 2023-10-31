@@ -19,8 +19,7 @@ app.use('/', require('./routes'));
 
 //connect to db
 const db = require('./models');
-db.mongoose
-  .connect(db.url, {
+db.mongoose.connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
